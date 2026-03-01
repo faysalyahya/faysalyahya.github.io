@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anwar Yahya</title>
+  <meta name="description" content="Private Equity Analyst Candidate. Oxford · Geneva · Madrid.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg:#090908; --bg2:#0f0e0d; --gold:#b8966a; --gold-l:#d4b48a;
+      --white:#f0ece4; --muted:#6a6460; --faint:#1e1c1a;
+      --serif:'Cormorant Garamond',serif; --sans:'Montserrat',sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background:var(--bg); color:var(--white); font-family:var(--sans); font-weight:300; line-height:1.7; overflow-x:hidden; }
+    body::before { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E"); opacity:0.28; pointer-events:none; z-index:100; }
+
+    nav { position:fixed; top:0; left:0; right:0; z-index:50; padding:22px 48px; display:flex; justify-content:space-between; align-items:center; background:linear-gradient(to bottom,rgba(9,9,8,0.96),transparent); }
+    .nav-logo { font-family:var(--serif); font-size:14px; font-weight:400; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); text-decoration:none; }
+    .nav-links { display:flex; gap:36px; list-style:none; }
+    .nav-links a { font-size:9px; font-weight:400; letter-spacing:0.32em; text-transform:uppercase; color:var(--muted); text-decoration:none; transition:color 0.3s; }
+    .nav-links a:hover { color:var(--gold); }
+
+    .c { position:fixed; width:18px; height:18px; z-index:49; animation:fi 2s ease 1.5s both; }
+    .c-tl { top:20px; left:20px; border-top:1px solid var(--gold); border-left:1px solid var(--gold); }
+    .c-tr { top:20px; right:20px; border-top:1px solid var(--gold); border-right:1px solid var(--gold); }
+    .c-bl { bottom:20px; left:20px; border-bottom:1px solid var(--gold); border-left:1px solid var(--gold); }
+    .c-br { bottom:20px; right:20px; border-bottom:1px solid var(--gold); border-right:1px solid var(--gold); }
+
+    .hero { height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:40px; position:relative; overflow:hidden; }
+    .hero::after { content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:800px; height:800px; background:radial-gradient(ellipse,rgba(184,150,106,0.05) 0%,transparent 70%); pointer-events:none; }
+    .hero-loc { font-size:9px; letter-spacing:0.42em; text-transform:uppercase; color:var(--muted); margin-bottom:48px; animation:up 1.2s ease 0.3s both; }
+    .hero-name { font-family:var(--serif); font-size:clamp(44px,7vw,80px); font-weight:300; letter-spacing:0.1em; text-transform:uppercase; line-height:1.05; animation:up 1.2s ease 0.5s both; }
+    .hero-div { display:flex; align-items:center; gap:14px; margin:34px auto; width:180px; animation:fi 1s ease 0.9s both; }
+    .hero-div span { flex:1; height:1px; background:var(--gold); opacity:0.4; }
+    .hero-div i { width:5px; height:5px; background:var(--gold); transform:rotate(45deg); display:block; }
+    .hero-tag { font-family:var(--serif); font-size:clamp(15px,2vw,20px); font-style:italic; font-weight:300; color:var(--gold-l); letter-spacing:0.06em; animation:up 1.2s ease 1s both; }
+    .hero-cta { margin-top:52px; display:flex; gap:22px; animation:up 1.2s ease 1.2s both; }
+    .btn-p { font-size:9px; font-weight:400; letter-spacing:0.3em; text-transform:uppercase; color:var(--bg); background:var(--gold); padding:14px 32px; text-decoration:none; transition:background 0.3s; }
+    .btn-p:hover { background:var(--gold-l); }
+    .btn-s { font-size:9px; font-weight:400; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); border:1px solid rgba(184,150,106,0.4); padding:14px 32px; text-decoration:none; transition:border-color 0.3s,color 0.3s; }
+    .btn-s:hover { border-color:var(--gold); color:var(--gold-l); }
+
+    .sec { padding:120px 48px; max-width:1000px; margin:0 auto; }
+    .sec-full { padding:120px 0; }
+    .sec-full .inner { max-width:1000px; margin:0 auto; padding:0 48px; }
+    .rule-sec { border-top:1px solid var(--faint); }
+    .sec-lbl { font-size:9px; font-weight:400; letter-spacing:0.45em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
+    .sec-ttl { font-family:var(--serif); font-size:clamp(28px,4vw,46px); font-weight:300; letter-spacing:0.06em; line-height:1.15; margin-bottom:56px; }
+
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:start; }
+    .about-text p { font-size:14px; color:#b0aca6; line-height:1.95; margin-bottom:20px; }
+    .about-text p strong { color:var(--white); font-weight:400; }
+    .pillars { display:flex; flex-direction:column; gap:2px; }
+    .pillar { padding:24px 26px; border:1px solid var(--faint); border-left:2px solid var(--gold); background:var(--bg2); transition:background 0.3s; }
+    .pillar:hover { background:#131210; }
+    .pillar-t { font-family:var(--serif); font-size:16px; font-weight:400; color:var(--gold-l); margin-bottom:8px; }
+    .pillar p { font-size:12px; color:var(--muted); line-height:1.7; }
+
+    .edu-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; margin-bottom:2px; }
+    .edu-card { background:var(--bg); padding:38px 34px; border:1px solid var(--faint); transition:border-color 0.3s; }
+    .edu-card:hover { border-color:rgba(184,150,106,0.3); }
+    .edu-date { font-size:9px; letter-spacing:0.3em; color:var(--gold); text-transform:uppercase; margin-bottom:14px; }
+    .edu-school { font-family:var(--serif); font-size:20px; font-weight:400; color:var(--white); margin-bottom:5px; }
+    .edu-deg { font-size:12px; color:var(--muted); font-style:italic; margin-bottom:18px; }
+    .edu-det { font-size:11px; color:#5a5652; line-height:1.75; }
+
+    .cert-list { display:flex; flex-direction:column; margin-top:64px; }
+    .cert-item { display:flex; align-items:flex-start; gap:22px; padding:26px 0; border-bottom:1px solid var(--faint); }
+    .cert-item:first-child { border-top:1px solid var(--faint); }
+    .cert-dot { width:6px; height:6px; background:var(--gold); transform:rotate(45deg); margin-top:5px; flex-shrink:0; }
+    .cert-body { flex:1; }
+    .cert-name { font-family:var(--serif); font-size:17px; font-weight:400; color:var(--white); margin-bottom:4px; }
+    .cert-sub { font-size:11px; color:var(--muted); line-height:1.65; }
+    .cert-st { font-size:9px; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); white-space:nowrap; margin-top:3px; }
+
+    .exp-list { display:flex; flex-direction:column; }
+    .exp-item { display:grid; grid-template-columns:190px 1fr; gap:48px; padding:48px 0; border-bottom:1px solid var(--faint); }
+    .exp-item:first-child { border-top:1px solid var(--faint); }
+    .exp-date { font-size:9px; letter-spacing:0.3em; color:var(--gold); text-transform:uppercase; margin-bottom:8px; }
+    .exp-co { font-family:var(--serif); font-size:19px; font-weight:400; color:var(--white); margin-bottom:4px; }
+    .exp-loc { font-size:10px; color:var(--muted); letter-spacing:0.14em; text-transform:uppercase; }
+    .exp-role { font-size:11px; font-style:italic; color:var(--gold-l); margin-bottom:18px; }
+    .exp-ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
+    .exp-ul li { font-size:13px; color:#807c78; padding-left:16px; position:relative; line-height:1.75; }
+    .exp-ul li::before { content:'—'; position:absolute; left:0; color:var(--gold); opacity:0.5; }
+
+    .act-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; }
+    .act-card { background:var(--bg); padding:34px 32px; border:1px solid var(--faint); transition:border-color 0.3s,background 0.3s; }
+    .act-card:hover { border-color:rgba(184,150,106,0.3); background:#0d0c0b; }
+    .act-ico { width:32px; height:32px; border:1px solid rgba(184,150,106,0.3); display:flex; align-items:center; justify-content:center; margin-bottom:18px; }
+    .act-ico span { font-family:var(--serif); font-size:13px; color:var(--gold); }
+    .act-name { font-family:var(--serif); font-size:17px; font-weight:400; color:var(--white); margin-bottom:5px; }
+    .act-role { font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+    .act-desc { font-size:12px; color:var(--muted); line-height:1.7; }
+
+    .cv-inner { max-width:520px; margin:0 auto; text-align:center; }
+    .cv-sub { font-size:13px; color:var(--muted); margin-bottom:48px; line-height:1.85; }
+    .cv-btn { display:inline-flex; align-items:center; gap:13px; font-size:10px; font-weight:400; letter-spacing:0.3em; text-transform:uppercase; color:var(--bg); background:var(--gold); padding:17px 46px; text-decoration:none; transition:background 0.3s; }
+    .cv-btn:hover { background:var(--gold-l); }
+    .cv-btn svg { width:14px; height:14px; stroke:var(--bg); }
+
+    footer { border-top:1px solid var(--faint); padding:36px 48px; display:flex; justify-content:space-between; align-items:center; }
+    .foot-l { font-family:var(--serif); font-size:13px; color:var(--muted); font-style:italic; }
+    .foot-r a { font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:var(--muted); text-decoration:none; transition:color 0.3s; }
+    .foot-r a:hover { color:var(--gold); }
+
+    .rv { opacity:0; transform:translateY(22px); transition:opacity 0.85s ease,transform 0.85s ease; }
+    .rv.on { opacity:1; transform:translateY(0); }
+
+    @keyframes up { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes fi  { from{opacity:0} to{opacity:1} }
+
+    @media(max-width:768px){
+      nav{padding:18px 24px} .nav-links{display:none}
+      .sec{padding:80px 24px} .sec-full .inner{padding:0 24px} .sec-full{padding:80px 0}
+      .about-grid,.edu-grid,.act-grid{grid-template-columns:1fr}
+      .exp-item{grid-template-columns:1fr;gap:12px}
+      footer{flex-direction:column;gap:18px;text-align:center}
+      .c{display:none} .hero-cta{flex-direction:column;align-items:center}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="c c-tl"></div><div class="c c-tr"></div>
+  <div class="c c-bl"></div><div class="c c-br"></div>
+
+  <nav>
+    <a href="#" class="nav-logo">A &middot; Y</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#cv">CV</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <p class="hero-loc">Oxford &nbsp;&middot;&nbsp; Geneva &nbsp;&middot;&nbsp; Madrid</p>
+    <h1 class="hero-name">Anwar Yahya</h1>
+    <div class="hero-div"><span></span><i></i><span></span></div>
+    <p class="hero-tag">Private Equity &nbsp;&middot;&nbsp; Oxford &nbsp;&middot;&nbsp; Spain</p>
+    <div class="hero-cta">
+      <a href="#about" class="btn-p">Explore</a>
+      <a href="#cv" class="btn-s">Download CV</a>
+    </div>
+  </div>
+
+  <section id="about" class="sec rule-sec">
+    <div class="rv">
+      <p class="sec-lbl">About</p>
+      <h2 class="sec-ttl">A bridge between<br>two markets</h2>
+    </div>
+    <div class="about-grid rv">
+      <div class="about-text">
+        <p>I am a <strong>final-year Business Management student</strong> at Oxford Brookes University, graduating May 2026, with a BBA from EU Business School Geneva. My goal is to join a Spanish private equity firm as an analyst — not for the name, but to learn from the inside how companies are built and transformed, before building something of my own.</p>
+        <p>What sets me apart is not a line on a CV — it is a lived understanding of the <strong>Spain-Morocco trade corridor</strong>. Born and raised in Melilla, native in both Spanish and Arabic, with direct family exposure to cross-border logistics in Nador, I bring something that cannot be learned in a classroom.</p>
+        <p>Morocco is an emerging market of 37 million people with a growing middle class, competitive production costs, EU trade agreements, and two hours from Madrid. For portfolio companies looking to <strong>expand into new markets or internationalise their supply chain</strong>, this corridor represents a real opportunity — and I can navigate it from day one.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <p class="pillar-t">International Formation</p>
+          <p>Dual degree across Oxford and Geneva, plus a Master's in Artificial Intelligence running simultaneously. Trilingual: Spanish (native), English (fluent), French (B1), Tamazight (conversational). Preparing LBO Modeling, CFA PE Certificate and Oxford Said Private Markets Programme.</p>
+        </div>
+        <div class="pillar">
+          <p class="pillar-t">Entrepreneurial Mindset</p>
+          <p>PE is the training ground, not the destination. The goal is to understand how companies are transformed through capital and operational focus — skills that translate directly to building something independently.</p>
+        </div>
+        <div class="pillar">
+          <p class="pillar-t">Morocco Expertise</p>
+          <p>Family business in cross-border logistics between Spain and Morocco. Deep knowledge of local operators, regulatory environment, distribution channels and commercial relationships on both sides of the Strait of Gibraltar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="education" class="sec-full rule-sec" style="background:var(--bg2)">
+    <div class="inner">
+      <div class="rv">
+        <p class="sec-lbl">Education</p>
+        <h2 class="sec-ttl">Academic Formation</h2>
+      </div>
+      <div class="edu-grid rv">
+        <div class="edu-card">
+          <p class="edu-date">Sep 2025 — May 2026</p>
+          <p class="edu-school">Oxford Brookes University</p>
+          <p class="edu-deg">BA (Hons) Business Management &middot; Expected First Class</p>
+          <p class="edu-det">Oxford, United Kingdom. Modules: Corporate Finance, Strategic Management, International Business, Entrepreneurship. Access to Oxford Union and the broader Oxford academic ecosystem.</p>
+        </div>
+        <div class="edu-card">
+          <p class="edu-date">Sep 2022 — Sep 2025</p>
+          <p class="edu-school">EU Business School</p>
+          <p class="edu-deg">Bachelor of Business Administration &middot; GPA 3.3 / 4.0</p>
+          <p class="edu-det">Geneva, Switzerland. International curriculum with emphasis on financial analysis, cross-border business strategy and entrepreneurship. Elected student representative for the international cohort.</p>
+        </div>
+        <div class="edu-card">
+          <p class="edu-date">Jan 2026 — May 2026</p>
+          <p class="edu-school">Universidad Isabel I / Big School</p>
+          <p class="edu-deg">Master in Artificial Intelligence &middot; In Progress</p>
+          <p class="edu-det">Online, Spain. AI applications in business and data-driven decision making. Directly relevant to deal sourcing intelligence, portfolio monitoring and operational analytics in PE.</p>
+        </div>
+        <div class="edu-card" style="display:flex;flex-direction:column;justify-content:center">
+          <p style="color:var(--muted);font-style:italic;font-family:var(--serif);font-size:15px;line-height:1.9">"Three degrees simultaneously — Oxford, Geneva, and AI — because the tools of private equity are changing, and I intend to be ahead of that curve."</p>
+        </div>
+      </div>
+      <div class="cert-list rv">
+        <div class="cert-item">
+          <div class="cert-dot"></div>
+          <div class="cert-body">
+            <p class="cert-name">Oxford Said Business School — Private Markets Programme</p>
+            <p class="cert-sub">Executive programme at the University of Oxford covering PE fund structures, VC, infrastructure investing and deal execution. Oxford-based senior practitioner network.</p>
+          </div>
+          <p class="cert-st">April 2026</p>
+        </div>
+        <div class="cert-item">
+          <div class="cert-dot"></div>
+          <div class="cert-body">
+            <p class="cert-name">Wall Street Prep — LBO Modeling &amp; Valuation</p>
+            <p class="cert-sub">Industry-standard leveraged buyout modelling, returns analysis, debt structuring and paper LBO technique for PE interviews.</p>
+          </div>
+          <p class="cert-st">In Progress</p>
+        </div>
+        <div class="cert-item">
+          <div class="cert-dot"></div>
+          <div class="cert-body">
+            <p class="cert-name">CFA Institute — Private Equity Certificate</p>
+            <p class="cert-sub">Institutional credential covering PE fund structures, deal sourcing, due diligence, portfolio management and exits.</p>
+          </div>
+          <p class="cert-st">In Progress</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="experience" class="sec rule-sec">
+    <div class="rv">
+      <p class="sec-lbl">Experience</p>
+      <h2 class="sec-ttl">On the Ground</h2>
+    </div>
+    <div class="exp-list">
+      <div class="exp-item rv">
+        <div>
+          <p class="exp-date">Jun – Aug 2024</p>
+          <p class="exp-co">SOMANADOR</p>
+          <p class="exp-loc">Nador, Morocco</p>
+        </div>
+        <div>
+          <p class="exp-role">Business Development Intern</p>
+          <ul class="exp-ul">
+            <li>Supported cross-border logistics operations in the Spain-Morocco trade corridor, managing supplier and customs relationships on both sides of the border.</li>
+            <li>Analysed freight volumes and route efficiency; contributed to a cost-reduction proposal delivering ~8% savings on select routes.</li>
+            <li>Leveraged native Spanish and Tamazight to negotiate directly with local operators and port authorities in Nador and northern Morocco.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-item rv">
+        <div>
+          <p class="exp-date">Jun – Aug 2023</p>
+          <p class="exp-co">Navantia Shipping</p>
+          <p class="exp-loc">Morocco</p>
+        </div>
+        <div>
+          <p class="exp-role">Operations Intern</p>
+          <ul class="exp-ul">
+            <li>Coordinated vessel scheduling and logistics documentation across Morocco.</li>
+            <li>Built weekly operational KPI dashboards for senior management; identified a scheduling inefficiency reducing idle time by ~5%.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-item rv">
+        <div>
+          <p class="exp-date">Jun – Aug 2022</p>
+          <p class="exp-co">Agriland</p>
+          <p class="exp-loc">Rabat, Morocco</p>
+        </div>
+        <div>
+          <p class="exp-role">Analyst Intern</p>
+          <ul class="exp-ul">
+            <li>Conducted market research on agri-supply chain trends across North Africa and Southern Spain.</li>
+            <li>Supported due diligence on potential commercial partnerships with Moroccan producers.</li>
+            <li>Delivered a sector analysis report used in a client presentation on cross-border agricultural trade opportunities.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="activities" class="sec-full rule-sec" style="background:var(--bg2)">
+    <div class="inner">
+      <div class="rv">
+        <p class="sec-lbl">Activities &amp; Affiliations</p>
+        <h2 class="sec-ttl">Oxford Network</h2>
+      </div>
+      <div class="act-grid rv">
+        <div class="act-card">
+          <div class="act-ico"><span>OU</span></div>
+          <p class="act-name">The Oxford Union Society</p>
+          <p class="act-role">Permanent Life Member</p>
+          <p class="act-desc">Founded 1823, one of the world's foremost debating and networking forums. Hosts heads of state, Nobel laureates and global business leaders. Permanent membership granted to Oxford Brookes students.</p>
+        </div>
+        <div class="act-card">
+          <div class="act-ico"><span>OB</span></div>
+          <p class="act-name">Oxford Brookes Entrepreneurs Society</p>
+          <p class="act-role">Active Member</p>
+          <p class="act-desc">Weekly sessions with angel investors, CEOs and startup founders. Direct bridge to the broader Oxford entrepreneurial and investment ecosystem. Speaker programmes and London industry visits.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="cv" class="sec rule-sec" style="text-align:center">
+    <div class="cv-inner rv">
+      <p class="sec-lbl">Curriculum Vitae</p>
+      <h2 class="sec-ttl" style="margin-bottom:20px">Download my CV</h2>
+      <p class="cv-sub">A one-page overview of my education, experience, certifications and activities. Available in PDF format.</p>
+      <a href="Anwar_Yahya_CV.pdf" download class="cv-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3v12m0 0l-4-4m4 4l4-4M3 17v2a2 2 0 002 2h14a2 2 0 002-2v-2"/>
+        </svg>
+        Download CV
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p class="foot-l">Anwar Yahya &nbsp;&middot;&nbsp; Oxford 2026</p>
+    <div class="foot-r">
+      <a href="mailto:anwar@anwar.es">anwar@anwar.es</a>
+    </div>
+  </footer>
+
+  <script>
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.rv').forEach(function(el) { obs.observe(el); });
+
+    var secs = document.querySelectorAll('[id]');
+    var links = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', function() {
+      var cur = '';
+      secs.forEach(function(s) { if (window.scrollY >= s.offsetTop - 120) cur = s.id; });
+      links.forEach(function(a) { a.style.color = a.getAttribute('href') === '#' + cur ? 'var(--gold)' : ''; });
+    });
+
+    // Fallback: show all content after 2s if observer didn't fire
+    setTimeout(function() {
+      document.querySelectorAll('.rv').forEach(function(el) { el.classList.add('on'); });
+    }, 2000);
+  </script>
+
+</body>
+</html>
