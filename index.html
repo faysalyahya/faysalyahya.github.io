@@ -3,99 +3,204 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anwar Ahmed Mahanan Yahya</title>
+  <title>Anwar Yahya</title>
+  <meta name="description" content="Private Equity Analyst Candidate. Oxford - Geneva - Madrid - Casablanca.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
-      --bg: #0a0a0a;
+      --bg: #090908;
+      --bg2: #0f0e0d;
       --gold: #b8966a;
-      --gold-light: #d4b48a;
+      --gold-l: #d4b48a;
       --white: #f0ece4;
       --muted: #6a6460;
-      --line: #1e1c1a;
+      --faint: #1e1c1a;
+      --serif: 'Cormorant Garamond', serif;
+      --sans: 'Montserrat', sans-serif;
     }
-    html, body { height: 100%; background: var(--bg); color: var(--white); font-family: Montserrat, sans-serif; font-weight: 300; overflow: hidden; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--white); font-family: var(--sans); font-weight: 300; line-height: 1.7; overflow-x: hidden; }
     body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      opacity: 0.35;
-      pointer-events: none;
-      z-index: 10;
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.28; pointer-events: none; z-index: 100;
     }
-    body::after {
-      content: '';
-      position: fixed;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      width: 700px; height: 700px;
-      background: radial-gradient(ellipse at center, rgba(184,150,106,0.06) 0%, transparent 70%);
-      pointer-events: none;
-      z-index: 0;
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; padding: 22px 48px; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to bottom, rgba(9,9,8,0.96), transparent); }
+    .nav-logo { font-family: var(--serif); font-size: 14px; font-weight: 400; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); text-decoration: none; }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { font-size: 9px; font-weight: 400; letter-spacing: 0.32em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--gold); }
+    .c { position: fixed; width: 18px; height: 18px; z-index: 49; animation: fi 2s ease 1.5s both; }
+    .c-tl { top:20px; left:20px; border-top:1px solid var(--gold); border-left:1px solid var(--gold); }
+    .c-tr { top:20px; right:20px; border-top:1px solid var(--gold); border-right:1px solid var(--gold); }
+    .c-bl { bottom:20px; left:20px; border-bottom:1px solid var(--gold); border-left:1px solid var(--gold); }
+    .c-br { bottom:20px; right:20px; border-bottom:1px solid var(--gold); border-right:1px solid var(--gold); }
+    .hero { height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 800px; height: 800px; background: radial-gradient(ellipse, rgba(184,150,106,0.05) 0%, transparent 70%); pointer-events: none; }
+    .hero-loc { font-size: 9px; letter-spacing: 0.42em; text-transform: uppercase; color: var(--muted); margin-bottom: 48px; animation: up 1.2s ease 0.3s both; }
+    .hero-name { font-family: var(--serif); font-size: clamp(44px, 7vw, 80px); font-weight: 300; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1.05; animation: up 1.2s ease 0.5s both; }
+    .hero-div { display: flex; align-items: center; gap: 14px; margin: 34px auto; width: 180px; animation: fi 1s ease 0.9s both; }
+    .hero-div span { flex: 1; height: 1px; background: var(--gold); opacity: 0.4; }
+    .hero-div i { width: 5px; height: 5px; background: var(--gold); transform: rotate(45deg); display: block; }
+    .hero-tag { font-family: var(--serif); font-size: clamp(15px, 2vw, 20px); font-style: italic; font-weight: 300; color: var(--gold-l); letter-spacing: 0.06em; animation: up 1.2s ease 1s both; }
+    .hero-cta { margin-top: 52px; display: flex; gap: 22px; animation: up 1.2s ease 1.2s both; }
+    .btn-p { font-size: 9px; font-weight: 400; letter-spacing: 0.3em; text-transform: uppercase; color: var(--bg); background: var(--gold); padding: 14px 32px; text-decoration: none; transition: background 0.3s; }
+    .btn-p:hover { background: var(--gold-l); }
+    .btn-s { font-size: 9px; font-weight: 400; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(184,150,106,0.4); padding: 14px 32px; text-decoration: none; transition: border-color 0.3s, color 0.3s; }
+    .btn-s:hover { border-color: var(--gold); color: var(--gold-l); }
+    .sec { padding: 120px 48px; max-width: 1000px; margin: 0 auto; }
+    .sec-full { padding: 120px 0; }
+    .sec-full .inner { max-width: 1000px; margin: 0 auto; padding: 0 48px; }
+    .rule-sec { border-top: 1px solid var(--faint); }
+    .sec-lbl { font-size: 9px; font-weight: 400; letter-spacing: 0.45em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+    .sec-ttl { font-family: var(--serif); font-size: clamp(28px, 4vw, 46px); font-weight: 300; letter-spacing: 0.06em; line-height: 1.15; margin-bottom: 56px; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+    .about-text p { font-size: 14px; color: #b0aca6; line-height: 1.95; margin-bottom: 20px; }
+    .about-text p strong { color: var(--white); font-weight: 400; }
+    .pillars { display: flex; flex-direction: column; gap: 2px; }
+    .pillar { padding: 24px 26px; border: 1px solid var(--faint); border-left: 2px solid var(--gold); background: var(--bg2); transition: background 0.3s; }
+    .pillar:hover { background: #131210; }
+    .pillar-t { font-family: var(--serif); font-size: 16px; font-weight: 400; color: var(--gold-l); margin-bottom: 8px; letter-spacing: 0.03em; }
+    .pillar p { font-size: 12px; color: var(--muted); line-height: 1.7; }
+    .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 2px; }
+    .edu-card { background: var(--bg); padding: 38px 34px; border: 1px solid var(--faint); transition: border-color 0.3s; }
+    .edu-card:hover { border-color: rgba(184,150,106,0.3); }
+    .edu-date { font-size: 9px; letter-spacing: 0.3em; color: var(--gold); text-transform: uppercase; margin-bottom: 14px; }
+    .edu-school { font-family: var(--serif); font-size: 20px; font-weight: 400; color: var(--white); margin-bottom: 5px; }
+    .edu-deg { font-size: 12px; color: var(--muted); font-style: italic; margin-bottom: 18px; }
+    .edu-det { font-size: 11px; color: #5a5652; line-height: 1.75; }
+    .cert-list { display: flex; flex-direction: column; margin-top: 64px; }
+    .cert-item { display: flex; align-items: flex-start; gap: 22px; padding: 26px 0; border-bottom: 1px solid var(--faint); }
+    .cert-item:first-child { border-top: 1px solid var(--faint); }
+    .cert-dot { width: 6px; height: 6px; background: var(--gold); transform: rotate(45deg); margin-top: 5px; flex-shrink: 0; }
+    .cert-body { flex: 1; }
+    .cert-name { font-family: var(--serif); font-size: 17px; font-weight: 400; color: var(--white); margin-bottom: 4px; }
+    .cert-sub { font-size: 11px; color: var(--muted); line-height: 1.65; }
+    .cert-st { font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); white-space: nowrap; margin-top: 3px; }
+    .exp-list { display: flex; flex-direction: column; }
+    .exp-item { display: grid; grid-template-columns: 190px 1fr; gap: 48px; padding: 48px 0; border-bottom: 1px solid var(--faint); }
+    .exp-item:first-child { border-top: 1px solid var(--faint); }
+    .exp-date { font-size: 9px; letter-spacing: 0.3em; color: var(--gold); text-transform: uppercase; margin-bottom: 8px; }
+    .exp-co { font-family: var(--serif); font-size: 19px; font-weight: 400; color: var(--white); margin-bottom: 4px; }
+    .exp-loc { font-size: 10px; color: var(--muted); letter-spacing: 0.14em; text-transform: uppercase; }
+    .exp-role { font-size: 11px; font-style: italic; color: var(--gold-l); margin-bottom: 18px; letter-spacing: 0.04em; }
+    .exp-ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .exp-ul li { font-size: 13px; color: #807c78; padding-left: 16px; position: relative; line-height: 1.75; }
+    .exp-ul li::before { content: '›'; position: absolute; left: 0; color: var(--gold); opacity: 0.5; }
+    .act-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .act-card { background: var(--bg); padding: 34px 32px; border: 1px solid var(--faint); transition: border-color 0.3s, background 0.3s; }
+    .act-card:hover { border-color: rgba(184,150,106,0.3); background: #0d0c0b; }
+    .act-ico { width: 32px; height: 32px; border: 1px solid rgba(184,150,106,0.3); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+    .act-ico span { font-family: var(--serif); font-size: 13px; color: var(--gold); }
+    .act-name { font-family: var(--serif); font-size: 17px; font-weight: 400; color: var(--white); margin-bottom: 5px; }
+    .act-role { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+    .act-desc { font-size: 12px; color: var(--muted); line-height: 1.7; }
+    .cv-inner { max-width: 520px; margin: 0 auto; text-align: center; }
+    .cv-sub { font-size: 13px; color: var(--muted); margin-bottom: 48px; line-height: 1.85; }
+    .cv-btn { display: inline-flex; align-items: center; gap: 13px; font-size: 10px; font-weight: 400; letter-spacing: 0.3em; text-transform: uppercase; color: var(--bg); background: var(--gold); padding: 17px 46px; text-decoration: none; transition: background 0.3s; }
+    .cv-btn:hover { background: var(--gold-l); }
+    .cv-btn svg { width: 14px; height: 14px; stroke: var(--bg); }
+    footer { border-top: 1px solid var(--faint); padding: 36px 48px; display: flex; justify-content: space-between; align-items: center; }
+    .foot-l { font-family: var(--serif); font-size: 13px; color: var(--muted); font-style: italic; }
+    .foot-r { display: flex; gap: 32px; }
+    .foot-r a { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.3s; }
+    .foot-r a:hover { color: var(--gold); }
+    .rv { opacity: 0; transform: translateY(22px); transition: opacity 0.85s ease, transform 0.85s ease; }
+    .rv.on { opacity: 1; transform: translateY(0); }
+    @keyframes up { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes fi { from { opacity:0; } to { opacity:1; } }
+    @media (max-width: 768px) {
+      nav { padding: 18px 24px; } .nav-links { display: none; }
+      .sec { padding: 80px 24px; } .sec-full .inner { padding: 0 24px; } .sec-full { padding: 80px 0; }
+      .about-grid, .edu-grid, .act-grid { grid-template-columns: 1fr; }
+      .exp-item { grid-template-columns: 1fr; gap: 12px; }
+      footer { flex-direction: column; gap: 18px; text-align: center; }
+      .c { display: none; } .hero-cta { flex-direction: column; align-items: center; }
     }
-    .container {
-      position: relative;
-      z-index: 1;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 40px;
-      text-align: center;
-    }
-    .rule-top { position: fixed; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0; animation: fadeIn 2s ease 0.5s forwards; }
-    .corner { position: fixed; width: 20px; height: 20px; opacity: 0; animation: fadeIn 2s ease 0.8s forwards; }
-    .corner-tl { top: 24px; left: 24px; border-top: 1px solid var(--gold); border-left: 1px solid var(--gold); }
-    .corner-tr { top: 24px; right: 24px; border-top: 1px solid var(--gold); border-right: 1px solid var(--gold); }
-    .corner-bl { bottom: 24px; left: 24px; border-bottom: 1px solid var(--gold); border-left: 1px solid var(--gold); }
-    .corner-br { bottom: 24px; right: 24px; border-bottom: 1px solid var(--gold); border-right: 1px solid var(--gold); }
-    .location { font-family: Montserrat, sans-serif; font-size: 9px; font-weight: 400; letter-spacing: 0.35em; text-transform: uppercase; color: var(--muted); margin-bottom: 52px; opacity: 0; animation: slideUp 1.2s ease 0.4s forwards; }
-    .name { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 5vw, 58px); font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); line-height: 1.1; opacity: 0; animation: slideUp 1.4s ease 0.6s forwards; }
-    .divider { display: flex; align-items: center; gap: 16px; margin: 32px auto; width: 200px; opacity: 0; animation: fadeIn 1.2s ease 1.0s forwards; }
-    .divider-line { flex: 1; height: 1px; background: var(--gold); opacity: 0.4; }
-    .divider-diamond { width: 5px; height: 5px; background: var(--gold); transform: rotate(45deg); opacity: 0.8; }
-    .tagline { font-family: 'Cormorant Garamond', serif; font-size: clamp(14px, 1.8vw, 18px); font-weight: 300; font-style: italic; color: var(--gold-light); letter-spacing: 0.08em; opacity: 0; animation: slideUp 1.2s ease 1.1s forwards; line-height: 1.8; }
-    .email-wrap { margin-top: 52px; opacity: 0; animation: slideUp 1.2s ease 1.4s forwards; }
-    .email { font-family: Montserrat, sans-serif; font-size: 11px; font-weight: 300; letter-spacing: 0.28em; text-transform: lowercase; color: var(--muted); text-decoration: none; transition: color 0.4s ease; position: relative; }
-    .email::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 1px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease; }
-    .email:hover { color: var(--gold-light); }
-    .email:hover::after { transform: scaleX(1); }
-    .coordinates { position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%); font-size: 9px; letter-spacing: 0.3em; color: var(--line); text-transform: uppercase; opacity: 0; animation: fadeIn 2s ease 2s forwards; }
-    .linkedin { position: fixed; bottom: 32px; right: 40px; font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); text-decoration: none; opacity: 0; animation: fadeIn 2s ease 1.8s forwards; transition: color 0.3s ease; }
-    .linkedin:hover { color: var(--gold); }
-    .enter-link { display: block; margin-top: 48px; font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); text-decoration: none; opacity: 0; animation: fadeIn 2s ease 1.6s forwards; transition: color 0.3s; }
-    .enter-link:hover { color: var(--gold-light); }
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes slideUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
-    @media (max-width: 600px) { .name { font-size: 28px; letter-spacing: 0.08em; } .tagline { font-size: 14px; } .corner { display: none; } }
   </style>
 </head>
 <body>
-  <div class="rule-top"></div>
-  <div class="corner corner-tl"></div>
-  <div class="corner corner-tr"></div>
-  <div class="corner corner-bl"></div>
-  <div class="corner corner-br"></div>
-  <div class="container">
-    <p class="location">Oxford &nbsp;&nbsp; Geneva &nbsp;&nbsp; Madrid &nbsp;&nbsp; Casablanca</p>
-    <h1 class="name">Anwar Ahmed<br>Mahanan Yahya</h1>
-    <div class="divider">
-      <div class="divider-line"></div>
-      <div class="divider-diamond"></div>
-      <div class="divider-line"></div>
+  <div class="c c-tl"></div><div class="c c-tr"></div><div class="c c-bl"></div><div class="c c-br"></div>
+  <nav>
+    <a href="index.html" class="nav-logo">A. Ya</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#cv">CV</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <p class="hero-loc">Oxford &nbsp;&nbsp; Geneva &nbsp;&nbsp; Madrid &nbsp;&nbsp; Casablanca</p>
+    <h1 class="hero-name">Anwar Yahya</h1>
+    <div class="hero-div"><span></span><i></i><span></span></div>
+    <p class="hero-tag">Private Equity &nbsp;&nbsp; Oxford &nbsp;&nbsp; Spain&ndash;Morocco Corridor</p>
+    <div class="hero-cta">
+      <a href="#about" class="btn-p">Explore</a>
+      <a href="AnwarYahyaCV.pdf" class="btn-s">Download CV</a>
     </div>
-    <p class="tagline">Private Equity &nbsp;&nbsp; Oxford &nbsp;&nbsp; Spain&ndash;Morocco Corridor</p>
-    <div class="email-wrap">
-      <a href="mailto:anwar@anwaryahya.com" class="email">anwar@anwaryahya.com</a>
-    </div>
-    <a href="portfolio.html" class="enter-link">Enter &rarr;</a>
   </div>
-  <p class="coordinates">35.8916&deg; N &nbsp; 2.9642&deg; W</p>
-  <a href="https://linkedin.com/in/anwar" target="_blank" class="linkedin">LinkedIn</a>
+
+  <section id="about" class="sec rule-sec">
+    <div class="rv">
+      <p class="sec-lbl">About</p>
+      <h2 class="sec-ttl">A bridge between<br>two markets</h2>
+    </div>
+    <div class="about-grid rv">
+      <div class="about-text">
+        <p>I am a <strong>final-year Business Management student</strong> at Oxford Brookes University, graduating May 2026, with a BBA from EU Business School Geneva. My goal is to join a Spanish private equity firm as an analyst.</p>
+        <p>What sets me apart is a lived understanding of the <strong>Spain-Morocco trade corridor</strong>. Native in both Spanish and Arabic, with direct family exposure to cross-border logistics in Nador.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <p class="pillar-t">International Formation</p>
+          <p>Dual degree across Oxford and Geneva, plus a Master's in Artificial Intelligence. Trilingual Spanish native, English fluent, French B1.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="sec-full rule-sec" style="background:var(--bg2)">
+    <div class="inner">
+      <div class="rv">
+        <p class="sec-lbl">Education</p>
+        <h2 class="sec-ttl">Academic Formation</h2>
+      </div>
+      <div class="edu-grid rv">
+        <div class="edu-card">
+          <p class="edu-date">Sep 2025 – May 2026</p>
+          <p class="edu-school">Oxford Brookes University</p>
+          <p class="edu-deg">BA Hons Business Management (Expected First Class)</p>
+          <p class="edu-det">Oxford, UK. Access to Oxford Union and the broader Oxford academic ecosystem.</p>
+        </div>
+        <div class="edu-card">
+          <p class="edu-date">Jan 2026 – May 2026</p>
+          <p class="edu-school">Universidad Isabel I / Big School</p>
+          <p class="edu-deg">Master in Artificial Intelligence (In Progress)</p>
+          <p class="edu-det">Spain. AI applications in business and deal sourcing intelligence in PE.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="foot-l">Anwar Yahya &nbsp;&nbsp; Oxford 2026</p>
+    <div class="foot-r">
+      <a href="mailto:anwar@anwaryahya.com">Email</a>
+      <a href="https://linkedin.com/in/anwar" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script>
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('on'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+  </script>
 </body>
 </html>
